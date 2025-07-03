@@ -21,8 +21,7 @@ Welcome to the Smart Multichain USDC Payment Scheduler, a decentralised applicat
 
 The Smart Multichain USDC Payment Scheduler addresses the challenge of managing recurring payments across blockchains. Users can schedule USDC payments with customizable intervals and execute them manually (with Chainlink Automation planned for production). The dApp optimises transaction fees using the LI.FI SDK supports multichain deployment, making it ideal for use cases like subscriptions, payroll, or cross-border remittances.
 
-This project was developed as part of a hackathon submission, earning bonuses for LI.FI ($2,000) and MetaMask ($2,000) integrations. The code is open-source, and the dApp is deployed at https://usdc-scheduler.vercel.app.
-
+This project was developed as part of a hackathon submission, earning bonuses for LI.FI ($2,000) and MetaMask ($2,000) integrations. The code is open-source, and the dApp is deployed at https://multichain-usdc-payment-scheduler.vercel.app
 ---
 
 ## ✨ Features
