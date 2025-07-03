@@ -1,6 +1,6 @@
 # 🚀 Smart Multichain USDC Payment Scheduler
 
-Welcome to the Smart Multichain USDC Payment Scheduler, a decentralized application (dApp) designed to automate USDC payments across multiple blockchain testnets (Ethereum Sepolia, Polygon Mumbai, and Arbitrum Sepolia). This project, built for the [Hackathon Name] 2025, integrates the LI.FI SDK for fee optimization, MetaMask SDK for wallet connectivity, and Chainlink Automation for future scalability. The modern, professional UI leverages React and Tailwind CSS, offering a seamless user experience.
+Welcome to the Smart Multichain USDC Payment Scheduler, a decentralised application (dApp) designed to automate USDC payments across multiple blockchain testnets (Ethereum Sepolia, Polygon Mumbai, and Arbitrum Sepolia) and some other Networks. This project, built for the MetaMask Card Dev Cook-Off 2025, integrates the LI.FI SDK for fee optimisation, MetaMask SDK for wallet connectivity, and Chainlink Automation for future scalability. The modern, professional UI leverages React and Tailwind CSS, offering a seamless user experience.
 
 ## 📑 Table of Contents
 
@@ -19,7 +19,7 @@ Welcome to the Smart Multichain USDC Payment Scheduler, a decentralized applicat
 
 ## 📝 Overview
 
-The Smart Multichain USDC Payment Scheduler addresses the challenge of managing recurring payments across blockchains. Users can schedule USDC payments with customizable intervals and execute them manually (with Chainlink Automation planned for production). The dApp optimizes transaction fees using the LI.FI SDK and supports multichain deployment, making it ideal for use cases like subscriptions, payroll, or cross-border remittances.
+The Smart Multichain USDC Payment Scheduler addresses the challenge of managing recurring payments across blockchains. Users can schedule USDC payments with customizable intervals and execute them manually (with Chainlink Automation planned for production). The dApp optimises transaction fees using the LI.FI SDK supports multichain deployment, making it ideal for use cases like subscriptions, payroll, or cross-border remittances.
 
 This project was developed as part of a hackathon submission, earning bonuses for LI.FI ($2,000) and MetaMask ($2,000) integrations. The code is open-source, and the dApp is deployed at https://usdc-scheduler.vercel.app.
 
@@ -81,7 +81,7 @@ The project follows a modular architecture combining frontend, smart contract, a
 
 ### 🧩 Explanation
 
-- **Frontend:** Built with React and rendered via index.html. The UI uses Tailwind CSS for styling, with Web3.js for blockchain interaction, MetaMask SDK for wallet connectivity, and LI.FI SDK for fee optimization. It communicates with the smart contract via RPC calls.
+- **Frontend:** Built with React and rendered via index.html. The UI uses Tailwind CSS for styling, with Web3.js for blockchain interaction, MetaMask SDK for wallet connectivity, and LI.FI SDK for fee optimisation. It communicates with the smart contract via RPC calls.
 - **Smart Contract:** The `USDCPaymentScheduler.sol` contract, written in Solidity, handles payment scheduling and execution. It integrates with the Chainlink AutomationCompatibleInterface for future automation and uses the IERC20 interface for USDC interactions.
 - **Deployment:** Managed with Hardhat, using a custom `deploy-v2-contracts.js` script. RPC URLs (e.g., Alchemy) and API keys (e.g., Polygonscan) are configured via `.env`, with contracts verified on respective explorers.
 
@@ -207,7 +207,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## 🙏 Acknowledgments
 
-- 🤖 xAI: For providing Grok 3 and support.
 - 🔗 LI.FI: For the SDK and $2,000 bonus.
 - 👛 MetaMask: For the SDK and $2,000 bonus.
 - ⛓️ Chainlink: For Automation inspiration.
