@@ -40,6 +40,7 @@ This project was developed as part of a hackathon submission, earning bonuses fo
 ## 🏗️ Architecture
 
 The project follows a modular architecture combining frontend, smart contract, and deployment layers:
+![image](https://github.com/user-attachments/assets/5564610c-f8c5-4449-b6c8-5834e8fc276b)
 
 ```
 +-----------------------------------------------------+
