@@ -1,101 +1,395 @@
-# Multichain USDC Payment Scheduler
+Smart Multichain USDC Payment Scheduler
 
-A decentralized application (dApp) that allows users to schedule recurring USDC payments across multiple blockchains with automatic fee optimization using real-time gas price data and cross-chain transfers via LI.FI SDK and Circle CCTP V2.
+Welcome to the Smart Multichain USDC Payment Scheduler, a decentralized application (dApp) designed to automate USDC payments across multiple blockchain testnets (Ethereum Sepolia, Polygon Mumbai, and Arbitrum Sepolia). This project, built for the [Hackathon Name] 2025, integrates the LI.FI SDK for fee optimization, MetaMask SDK for wallet connectivity, and Chainlink Automation for future scalability. The modern, professional UI leverages React and Tailwind CSS, offering a seamless user experience.
 
-## 🚀 Features
+Table of Contents
 
-- **Smart Payment Scheduling**: Schedule recurring USDC payments with flexible intervals
-- **Fee Optimization**: Automatically select the lowest-cost blockchain for each payment
-- **Cross-Chain Support**: Seamless transfers across Ethereum, Polygon, and Arbitrum testnets
-- **MetaMask Integration**: Easy wallet connectivity and transaction signing
-- **Real-Time Monitoring**: Live gas price tracking and fee comparison
-- **Intuitive UI**: Clean, responsive interface with real-time feedback
 
-## 🏗️ Architecture
 
-### Smart Contracts
-- **Language**: Solidity ^0.8.0
-- **Security**: OpenZeppelin contracts for IERC20 handling and reentrancy protection
-- **Features**: Payment scheduling, execution, and management
 
-### Frontend
-- **Framework**: Next.js with React
-- **Styling**: Tailwind CSS with shadcn/ui components
-- **Integrations**: MetaMask SDK, LI.FI SDK, Web3.js
 
-### Supported Networks
-- Ethereum Sepolia (Chain ID: 11155111)
-- Polygon Mumbai (Chain ID: 80001)
-- Arbitrum Sepolia (Chain ID: 421614)
+Overview
 
-## 🛠️ Setup Instructions
 
-### Prerequisites
-1. Install MetaMask browser extension
-2. Configure testnet networks in MetaMask
-3. Obtain testnet tokens from faucets
-4. Get test USDC from Circle's testnet faucet
 
-### Deployment
-1. Deploy smart contracts on each testnet using Remix IDE
-2. Update contract addresses in `app/lib/constants.ts`
-3. Configure LI.FI SDK integrator ID
-4. Set up Etherscan API key for gas price tracking
+Features
 
-### Local Development
-\`\`\`bash
+
+
+Architecture
+
+
+
+Installation
+
+
+
+Usage
+
+
+
+Demo
+
+
+
+Technical Details
+
+
+
+Contributing
+
+
+
+License
+
+
+
+Acknowledgments
+
+Overview
+
+The Smart Multichain USDC Payment Scheduler addresses the challenge of managing recurring payments across blockchains. Users can schedule USDC payments with customizable intervals and execute them manually (with Chainlink Automation planned for production). The dApp optimizes transaction fees using the LI.FI SDK and supports multichain deployment, making it ideal for use cases like subscriptions, payroll, or cross-border remittances.
+
+This project was developed as part of a hackathon submission, earning bonuses for LI.FI ($2,000) and MetaMask ($2,000) integrations. The code is open-source, and the dApp is deployed at https://usdc-scheduler.vercel.app.
+
+Features
+
+
+
+
+
+Multichain Support: Deployed on Ethereum Sepolia, Polygon Mumbai, and Arbitrum Sepolia testnets.
+
+
+
+USDC Payment Scheduling: Schedule payments with custom amounts, recipients, and intervals.
+
+
+
+Fee Optimization: Uses LI.FI SDK to find the lowest-cost chain for transactions.
+
+
+
+Wallet Integration: Connects seamlessly with MetaMask via the MetaMask SDK.
+
+
+
+Professional UI: Modern design with Tailwind CSS, featuring cards, gradients, and responsiveness.
+
+
+
+Chainlink Compatibility: Designed for future automation with Chainlink Automation.
+
+
+
+Real-Time Feedback: Displays payment status and estimated fees in the UI.
+
+Architecture
+
+The project follows a modular architecture combining frontend, smart contract, and deployment layers:
+
+Architecture Diagram
+
++-----------------------------------------------------+
+|                   Frontend (dApp)                   |
+| +-----------------------------------------------+  |
+| | React + JSX                                   |  |
+| | - UI: Tailwind CSS, Card-based Layout         |  |
+| | - Libraries: Web3.js, MetaMask SDK, LI.FI SDK |  |
+| +-----------------------------------------------+  |
+|                                                    |
++-----------------------------------------------------+
+          | (Interacts with Smart Contract via Web3)
+          v
++-----------------------------------------------------+
+|                Smart Contract Layer                |
+| +-----------------------------------------------+  |
+| | USDCPaymentScheduler.sol                      |  |
+| | - Language: Solidity 0.8.28                   |  |
+| | - Features: Payment Scheduling, Execution     |  |
+| | - Dependencies: Chainlink Automation Interface|  |
+| | - Deployed on: Sepolia, Mumbai, Arbitrum Sepolia |  |
+| +-----------------------------------------------+  |
+|                                                    |
++-----------------------------------------------------+
+          | (Deployed using Hardhat)
+          v
++-----------------------------------------------------+
+|                  Deployment Layer                  |
+| +-----------------------------------------------+  |
+| | Hardhat                                       |  |
+| | - Config: hardhat.config.js                   |  |
+| | - RPCs: Alchemy (Sepolia, Mumbai, Arbitrum)   |  |
+| | - Verification: Etherscan, Polygonscan, Arbiscan |  |
+| | - Script: deploy-v2-contracts.js              |  |
+| +-----------------------------------------------+  |
+|                                                    |
++-----------------------------------------------------+
+
+Explanation
+
+
+
+
+
+Frontend: Built with React and rendered via index.html. The UI uses Tailwind CSS for styling, with Web3.js for blockchain interaction, MetaMask SDK for wallet connectivity, and LI.FI SDK for fee optimization. It communicates with the smart contract via RPC calls.
+
+
+
+Smart Contract: The USDCPaymentScheduler.sol contract, written in Solidity, handles payment scheduling and execution. It integrates with the Chainlink AutomationCompatibleInterface for future automation and uses the IERC20 interface for USDC interactions.
+
+
+
+Deployment: Managed with Hardhat, using a custom deploy-v2-contracts.js script. RPC URLs (e.g., Alchemy) and API keys (e.g., Polygonscan) are configured via .env, with contracts verified on respective explorers.
+
+Installation
+
+To run this project locally, follow these steps:
+
+Prerequisites
+
+
+
+
+
+Node.js (v16 or later)
+
+
+
+npm (comes with Node.js)
+
+
+
+MetaMask wallet with testnet funds (Sepolia ETH, Mumbai MATIC, Arbitrum Sepolia ETH)
+
+
+
+Alchemy account for RPC URLs (free tier)
+
+Steps
+
+
+
+
+
+Clone the Repository:
+
+git clone https://github.com/your-username/usdc-payment-scheduler.git
+cd usdc-payment-scheduler
+
+
+
+Install Dependencies:
+
 npm install
-npm run dev
-\`\`\`
+npm install --save-dev hardhat @nomicfoundation/hardhat-toolbox @chainlink/contracts dotenv
 
-## 🎯 Hackathon Alignment
 
-### Real World Relevance (25%)
-- Automates USDC payments for remittances, subscriptions, and treasury management
-- Reduces costs and complexity for MetaMask Card users
-- Addresses real pain points in Web3 payments
 
-### Creativity & Originality (20%)
-- Novel fee optimization using real-time gas price data
-- Intelligent chain selection for cost savings
-- Seamless cross-chain payment scheduling
+Configure Environment Variables:
 
-### Functionality (20%)
-- Fully functional payment scheduling system
-- Cross-chain USDC transfers via Circle CCTP V2
-- Real-time fee optimization and execution
 
-### User Experience (15%)
-- Intuitive React-based interface
-- Clear feedback on transaction status and savings
-- Responsive design with modern UI components
 
-### Potential Impact/Scalability (20%)
-- Extensible to additional blockchains
-- Integration potential with DeFi protocols
-- Foundation for automated Web3 payment systems
 
-## 💰 Bonus Eligibility
 
-- **MetaMask SDK Integration** ($2,000): Wallet connectivity and transaction signing
-- **LI.FI SDK Integration** ($2,000): Cross-chain transfers and fee estimation
-- **Circle CCTP V2**: Secure USDC bridging across chains
+Create a .env file in the root directory:
 
-## 🔒 Security Features
+SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/your-alchemy-api-key
+MUMBAI_RPC_URL=https://polygon-mumbai.g.alchemy.com/v2/your-alchemy-api-key
+ARBITRUM_SEPOLIA_RPC_URL=https://arb-sepolia.g.alchemy.com/v2/your-alchemy-api-key
+PRIVATE_KEY=0xYourPrivateKey
+POLYGONSCAN_API_KEY=YourPolygonscanApiKey
+ARBISCAN_API_KEY=YourArbiscanApiKey
+ETHERSCAN_API_KEY=YourEtherscanApiKey
 
-- OpenZeppelin security patterns
-- Reentrancy protection
-- Input validation and error handling
-- Secure cross-chain transfers via Circle CCTP V2
 
-## 🚀 Future Enhancements
 
-- Chainlink Automation for automatic execution
-- Additional blockchain support (Optimism, Base, Avalanche)
-- DeFi integrations (yield farming while scheduled)
-- AI-driven fee prediction
-- Circle Wallets integration
+Replace placeholders with your Alchemy API keys, MetaMask private key (testnet-only), and explorer API keys.
 
-## 📝 License
 
-MIT License - see LICENSE file for details
+
+Set Up Hardhat:
+
+
+
+
+
+Initialize Hardhat if not already done:
+
+npx hardhat init
+
+
+
+Accept defaults for a JavaScript project and update hardhat.config.js with the provided configuration.
+
+
+
+Install Serve (for UI):
+
+npm install -g serve
+
+Usage
+
+Deploying the Contract
+
+
+
+
+
+Run the deployment script:
+
+npx hardhat run scripts/deploy-v2-contracts.js
+
+
+
+Note the deployed contract addresses for Sepolia, Mumbai, and Arbitrum Sepolia.
+
+
+
+Update the contractAddresses object in index.html with these addresses.
+
+Running the dApp
+
+
+
+
+
+Start the local server:
+
+serve
+
+
+
+Open http://localhost:3000 in a browser.
+
+
+
+Connect MetaMask to a testnet (e.g., Sepolia), fund it with testnet tokens, and interact with the UI:
+
+
+
+
+
+Schedule a payment (e.g., 10 USDC, 60-second interval).
+
+
+
+Execute the payment after the interval and verify on the explorer.
+
+Testing
+
+
+
+
+
+Test responsiveness by resizing the browser or using Chrome DevTools.
+
+
+
+Verify fee optimization by scheduling payments on different chains.
+
+
+
+Check MetaMask popups for transaction approvals.
+
+Demo
+
+A live demo is available at https://usdc-scheduler.vercel.app. The video pitch (3–5 minutes) includes:
+
+
+
+
+
+Connecting MetaMask and scheduling a 10 USDC payment.
+
+
+
+Executing the payment after 60 seconds.
+
+
+
+Showcasing the modern UI (navigation, cards, gradients).
+
+
+
+Highlighting LI.FI fee optimization and Chainlink compatibility.
+
+Technical Details
+
+
+
+
+
+Frontend: React, Tailwind CSS, Web3.js, MetaMask SDK, LI.FI SDK.
+
+
+
+Smart Contract: Solidity 0.8.28, Chainlink Automation interface.
+
+
+
+Deployment: Hardhat, Alchemy RPCs, Etherscan/Polygonscan/Arbiscan verification.
+
+
+
+Dependencies: @chainlink/contracts, dotenv.
+
+
+
+Contract Addresses: Update index.html with deployed addresses (e.g., Sepolia: 0xYourSepoliaAddress).
+
+Contributing
+
+Contributions are welcome! To contribute:
+
+
+
+
+
+Fork the repository.
+
+
+
+Create a new branch (git checkout -b feature-name).
+
+
+
+Commit changes (git commit -m "Add feature-name").
+
+
+
+Push to the branch (git push origin feature-name).
+
+
+
+Open a pull request.
+
+Please ensure code follows the project’s style guidelines and includes tests.
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Acknowledgments
+
+
+
+
+
+xAI: For providing Grok 3 and support.
+
+
+
+LI.FI: For the SDK and $2,000 bonus.
+
+
+
+MetaMask: For the SDK and $2,000 bonus.
+
+
+
+Chainlink: For Automation inspiration.
+
+
+
+Alchemy: For reliable RPC endpoints.
