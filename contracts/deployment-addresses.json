@@ -1,0 +1,20 @@
+{
+  "sepolia": {
+    "chainId": 11155111,
+    "usdcAddress": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+    "contractAddress": "0x...",
+    "deployedAt": "2025-01-01T00:00:00Z"
+  },
+  "mumbai": {
+    "chainId": 80001,
+    "usdcAddress": "0x0FA8781a83E468F3b7C25308B9421c0c1bE7a6B0",
+    "contractAddress": "0x...",
+    "deployedAt": "2025-01-01T00:00:00Z"
+  },
+  "arbitrumSepolia": {
+    "chainId": 421614,
+    "usdcAddress": "0x75faf114eafb1BDbe6fc3363c7f609b9d5a8f3dA",
+    "contractAddress": "0x...",
+    "deployedAt": "2025-01-01T00:00:00Z"
+  }
+}
