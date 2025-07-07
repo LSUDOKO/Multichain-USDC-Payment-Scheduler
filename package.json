@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@lifi/sdk": "^3.0.0",
+    "@lifi/sdk": "^3.7.11",
     "@lifi/widget": "^3.0.0",
     "@nomicfoundation/hardhat-chai-matchers": "latest",
     "@nomicfoundation/hardhat-ethers": "latest",
