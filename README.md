@@ -35,6 +35,8 @@ This project was developed as part of a hackathon submission, earning bonuses fo
 - 📊 **Real-Time Feedback:** Displays payment status and estimated fees in the UI.
 
 ---
+## ✅Terminal Output 
+<img width="1919" height="1019" alt="Screenshot 2025-07-07 164556" src="https://github.com/user-attachments/assets/c699213d-5d39-4004-b011-1df73d55d618" />
 
 ## 🏗️ Architecture
 
