@@ -1,6 +1,6 @@
 # 🚀 Smart Multichain USDC Payment Scheduler
 
-Welcome to the Smart Multichain USDC Payment Scheduler, a decentralised application (dApp) designed to automate USDC payments across multiple blockchain testnets (Ethereum Sepolia, Polygon Mumbai, and Arbitrum Sepolia) and some other Networks. This project, built for the MetaMask Card Dev Cook-Off 2025, integrates the LI.FI SDK for fee optimisation, MetaMask SDK for wallet connectivity, and Chainlink Automation for future scalability. The modern, professional UI leverages React and Tailwind CSS, offering a seamless user experience.
+Welcome to the Smart Multichain USDC Payment Scheduler, a decentralised application (dApp) designed to automate USDC payments across multiple blockchain testnets (Ethereum Sepolia, Polygon Mumbai, and Arbitrum Sepolia) and some other Networks with the best analysis with LI.Which chain to select and the chain network by metamask. This project, built for the MetaMask Card Dev Cook-Off 2025, integrates the LI.FI SDK for fee optimisation, MetaMask SDK for wallet connectivity, and Chainlink Automation for future scalability. The modern, professional UI leverages React and Tailwind CSS, offering a seamless user experience.
 
 ## 📑 Table of Contents
 
