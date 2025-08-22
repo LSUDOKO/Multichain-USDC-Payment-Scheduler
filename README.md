@@ -16,12 +16,41 @@ Welcome to the Smart Multichain USDC Payment Scheduler, a decentralised applicat
 - [Acknowledgments](#acknowledgments)
 
 ---
+## Why It Fits Circle Layer
+- **USDC-Native Design**: Project already revolves around USDC recurring payments, matching Circle’s mission of native multichain USDC.
+- **Cross-Chain Payments**: Circle Layer (CCTP) enables seamless USDC transfers across Ethereum, Polygon, Arbitrum, and more.
+- **Hackathon Relevance**: Circle is a sponsor — integrating CCTP strengthens eligibility for Circle bonus tracks.
+- **Future-Proof Architecture**: Replaces wrapped/bridged USDC with native USDC transfers, improving security and adoption.
 
+## How to Integrate Circle Layer
+1. **Smart Contract Updates**  
+   - Import and connect to Circle’s `MessageTransmitter` and `TokenMessenger` contracts.  
+   - Burn USDC on source chain → Mint equivalent USDC on destination chain.  
+
+2. **Frontend Enhancements**  
+   - Add **chain selection powered by Circle Layer**.  
+   - Display Circle transfer status, estimated fees, and final settlement confirmation.  
+
+3. **Combine With LI.FI**  
+   - Use **LI.FI for analytics & fee routing**.  
+   - Use **Circle Layer for actual secure cross-chain settlement**.  
+
+4. **Chainlink Compatibility**  
+   - Scheduled payments remain Chainlink-automation friendly, even across multiple chains.  
+
+5. **MetaMask Integration**  
+   - Users still connect via MetaMask SDK, approve transfers, and manage testnet/production wallets seamlessly.  
+
+## Benefits of Circle Integration
+- **Security**: Native USDC movement reduces bridge risks.  
+- **Cost-Efficiency**: Circle Layer optimizes settlement without unnecessary hops.  
+- **Scalability**: Works across all Circle-supported chains (Ethereum, Polygon, Arbitrum, Avalanche, etc.).  
+- **User Trust**: Circle-backed infrastructure ensures reliability for real-world adoption.  
 ## 📝 Overview
 
 The Smart Multichain USDC Payment Scheduler addresses the challenge of managing recurring payments across blockchains. Users can schedule USDC payments with customizable intervals and execute them manually (with Chainlink Automation planned for production). The dApp optimises transaction fees using the LI.FI SDK supports multichain deployment, making it ideal for use cases like subscriptions, payroll, or cross-border remittances.
 
-This project was developed as part of a hackathon submission, earning bonuses for LI.FI ($2,000) and MetaMask ($2,000) integrations. The code is open-source, and the dApp is deployed at https://multichain-usdc-payment-scheduler.vercel.app
+the dApp is deployed at https://multichain-usdc-payment-scheduler.vercel.app
 ---
 
 ## ✨ Features
